@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import CarouselCompound from './components/carousel-compound'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <div className="app__main-container">
+            <CarouselCompound infinite>
+                <CarouselCompound.Page>
+                    <div className="item item-1">Item 1</div>
+                </CarouselCompound.Page>
+                <CarouselCompound.Page>
+                    <div className="item item-2">Item 2</div>
+                </CarouselCompound.Page>
+                <CarouselCompound.Page>
+                    <div className="item item-3">Item 3</div>
+                </CarouselCompound.Page>
+            </CarouselCompound>
+        </div>
+    )
 }
-
-export default App;
